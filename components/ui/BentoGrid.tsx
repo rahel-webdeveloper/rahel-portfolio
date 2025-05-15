@@ -43,7 +43,7 @@ export const BentoGridItem = ({
   return (
     <div
       className={cn(
-        "group/bento relative overflow-hidden shadow-input row-span-1 flex flex-col justify-between space-y-4 rounded-xl border border-neutral-200 bg-white p-4 transition duration-200 hover:shadow-xl dark:border-white/[0.2] dark:bg-black dark:shadow-none",
+        "group/bento relative overflow-hidden shadow-input row-span-1 flex flex-col justify-between space-y-4 rounded-xl border border-white/[0.1] transition duration-200 hover:shadow-xl dark:shadow-none",
         className
       )}
       style={{
@@ -98,9 +98,43 @@ export const BentoGridItem = ({
           <div className="font-sans font-bold text-lg lg:text-3xl max-w-96 z-10">
             {title}
           </div>
-        </div>
 
-        {id === 2 && <GlobeDemo />}
+          {id === 2 && <GlobeDemo />}
+
+          {id === 3 && (
+            <div className="flex gap-1 lg:gap-5 w-fit absolute -right-3 lg:-right-2">
+              <div className="flex flex-col gap-3 lg:gap-4">
+                {["React.js", "Next.js", "Typescript"].map((item, i) => (
+                  <span
+                    key={i}
+                    className="py-2 lg:py-3 px-3 lg:px-5 text-xs opacity-50 lg:opacity-100 rounded-lg text-center bg-[#10132E]"
+                  >
+                    {item}
+                  </span>
+                ))}
+                <span className="py-4 px-3 rounded-lg text-center bg-[#10132e]" />
+              </div>
+
+              <div className="flex flex-col gap-3 lg:gap-4">
+                <span className="py-4 px-3 rounded-lg text-center bg-[#10132e]" />
+                {["Express", "Node.js", "MongoDB"].map((item, i) => (
+                  <span
+                    key={i}
+                    className="py-2 lg:py-3 px-3 lg:px-5 text-xs opacity-50 lg:opacity-100 rounded-lg text-center bg-[#10132E]"
+                  >
+                    {item}
+                  </span>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {id === 6 && (
+            <div className="mt-5 relative">
+              <div className={`absolute -bottom-5 right-0`}></div>
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );
