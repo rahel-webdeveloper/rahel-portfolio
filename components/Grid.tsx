@@ -1,7 +1,5 @@
-import React from "react";
-import { BentoGrid, BentoGridItem } from "./ui/BentoGrid";
 import { gridItems } from "@/data";
-import { FaAddressBook } from "react-icons/fa6";
+import { BentoGrid, BentoGridItem } from "./ui/BentoGrid";
 
 const Grid = () => {
   return (
