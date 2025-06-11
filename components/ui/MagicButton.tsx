@@ -2,8 +2,8 @@ import React, { ReactNode } from "react";
 
 interface Params {
   title: string;
-  icon: ReactNode;
-  position: string;
+  icon?: ReactNode;
+  position?: string;
   handleClick?: () => void;
   otherClasses?: string;
 }
