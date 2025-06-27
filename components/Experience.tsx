@@ -11,14 +11,14 @@ const Experience = () => {
         <span className="text-purple"> work experience</span>
       </h1>
 
-      <div className="w-full mt-12 grid grid-cols-1 md:grid-cols-2 gap-10">
+      <div className="w-full mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
         {workExperience.map((card) => (
           <Button
             key={card.id}
             className="flex-1 text-white border-neutral-200 dark:border-slate-800"
             duration={Math.floor(Math.random() * 1000) + 10000}
           >
-            <div className="flex lg:flex-row flex-row lg:items-center p-3 py-6 md:p-5 lg:p-10 gap-2">
+            <div className="flex lg:flex-row flex-col lg:items-center p-3 py-6 md:p-5 lg:p-10 gap-2">
               <img
                 src={card.thumbnail}
                 alt={card.thumbnail}
