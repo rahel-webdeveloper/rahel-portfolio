@@ -3,11 +3,13 @@
 import { cn } from "@/lib/utils";
 import { GlobeDemo } from "./GlobeDemo";
 import { WavyBackground } from "./WavyBackground";
-import Lottie from "react-lottie";
+import dynamic from "next/dynamic";
 import { useState } from "react";
 import animationData from "@/data/confetti.json";
 import MagicButton from "./MagicButton";
 import { FaCopy } from "react-icons/fa6";
+
+const Lottie = dynamic(() => import("react-lottie"), { ssr: false });
 
 export const BentoGrid = ({
   className,
@@ -142,18 +144,19 @@ export const BentoGridItem = ({
           {id === 6 && (
             <div className="mt-5 relative">
               <div className={`absolute -bottom-5 right-0`}>
-                <Lottie
-                  options={{
-                    loop: copied,
-                    autoplay: copied,
-                    animationData,
-                    rendererSettings: {
-                      preserveAspectRatio: "xMidYMid slice",
-                    },
-                  }}
-                />
+                {copied && (
+                  <Lottie
+                    options={{
+                      loop: true,
+                      autoplay: true,
+                      animationData,
+                      rendererSettings: {
+                        preserveAspectRatio: "xMidYMid slice",
+                      },
+                    }}
+                  />
+                )}
               </div>
-
               <MagicButton
                 title={copied ? "Email copied" : "Copy my email"}
                 icon={<FaCopy />}

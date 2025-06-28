@@ -4,6 +4,7 @@ import { cn } from "@/lib/utils";
 import { TextGenerateEffect } from "./ui/TextGenerateEffect";
 import MagicButton from "./ui/MagicButton";
 import { FaLocationArrow } from "react-icons/fa";
+import Link from "next/link";
 
 const Hero = () => {
   return (
@@ -50,13 +51,13 @@ const Hero = () => {
             Afghanistan.
           </p>
 
-          <a href="#about">
+          <Link href="#about">
             <MagicButton
               title="See my work"
               icon={<FaLocationArrow />}
               position="right"
             />
-          </a>
+          </Link>
         </div>
       </div>
     </div>
