@@ -47,8 +47,8 @@ const Hero = () => {
           />
 
           <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-1xl">
-            Hi, I&lsquo;am Khatibullah Rahel, a Next.js Developer based in
-            Afghanistan.
+            Hi, I&lsquo;am Khatibullah Rahel, A MERN Full Stack Developer based
+            in Afghanistan.
           </p>
 
           <Link href="#about">
