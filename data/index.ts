@@ -49,7 +49,7 @@ export const gridItems = [
 
   {
     id: 5,
-    title: "Currently building a AI driven app",
+    title: "Currently building an AI Language teacher app",
     description: "The Inside Scoop",
     className: "md:col-span-3 md:row-span-2",
     imgClassName: "absolute right-0 bottom-0 md:w-96 w-60",
@@ -82,10 +82,9 @@ export const projects = [
     id: 2,
     title: "Subscription tracker API",
     des: "Subscription tracker project developed with JavaScript(Express.js) designed to support the any application ecosystem which needs the subscription. This service provides the necessary APIs, business logic",
-
+    link: "https://github.com/rahel-webdeveloper/subscription-tracker",
     img: "/p2.png",
     iconLists: ["/exp.svg", "/node.svg", "/js.svg", "/mongo.svg"],
-    link: "https://github.com/rahel-webdeveloper/taskly-backend",
   },
   {
     id: 3,
@@ -93,7 +92,7 @@ export const projects = [
     des: "Taskly backend project developed with JavaScript(Express.js) designed to support the Taskly application ecosystem. This service provides the necessary APIs, business logic",
     img: "/p3.png",
     iconLists: ["/exp.svg", "/node.svg", "/js.svg", "/mongo.svg"],
-    link: "https://github.com/rahel-webdeveloper/subscription-tracker",
+    link: "https://github.com/rahel-webdeveloper/taskly-backend",
   },
   {
     id: 4,
@@ -174,29 +173,29 @@ export const companies = [
 export const workExperience = [
   {
     id: 1,
-    title: "Frontend Engineer Intern",
-    desc: "Assisted in the development of a web-based platform using React.js, enhancing interactivity.",
+    title: "Frontend Developer — Personal Project",
+    desc: "Built a responsive, component-driven web application using React.js and modern ES6+ JavaScript. Focused on reusable components, accessibility (a11y), and clean state management.",
     className: "md:col-span-2",
     thumbnail: "/exp1.svg",
   },
   {
     id: 2,
-    title: "Mobile App Dev - JSM Tech",
-    desc: "Designed and developed mobile app for both iOS & Android platforms using React Native.",
-    className: "md:col-span-2", // change to md:col-span-2
+    title: "PWA Engineer — AI Language Teacher App",
+    desc: "Converted a language-learning platform into an installable Progressive Web App with service workers, offline support, and performance optimizations (Lighthouse improvements). Integrated AI-powered text-to-speech and NLP features to convert written Pashto into audio, create interactive lesson flows, and personalize learning experiences.",
+    className: "md:col-span-2",
     thumbnail: "/exp2.svg",
   },
   {
     id: 3,
-    title: "Freelance App Dev Project",
-    desc: "Led the dev of a mobile app for a client, from initial concept to deployment on app stores.",
-    className: "md:col-span-2", // change to md:col-span-2
+    title: "API Integration & Data Validation — Taskly",
+    desc: "Implemented structured data validation and RESTful API integration for a task-tracking application using Vanilla JavaScript (ES6+). Built charting (pie, bar), filtering, and reliable data-sync flows.",
+    className: "md:col-span-2",
     thumbnail: "/exp3.svg",
   },
   {
     id: 4,
-    title: "Lead Frontend Developer",
-    desc: "Developed and maintained user-facing features using modern frontend technologies.",
+    title: "Lead Frontend Developer — Portfolio Dashboard",
+    desc: "Designed and developed a project management dashboard: interactive charts, searchable tables, and role-aware UI. Emphasized maintainability, documentation, and deployment workflows (Netlify/Vercel).",
     className: "md:col-span-2",
     thumbnail: "/exp4.svg",
   },
