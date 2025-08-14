@@ -1,36 +1,96 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+cat <<'EOF' > README.md
+# Rahel Portfolio
 
-## Getting Started
+This is **Rahel’s personal developer portfolio**, built with **Next.js** and **TypeScript**, designed to showcase projects and highlights in a clean, modern way.
 
-First, run the development server:
+Live Demo: [rahel-portfolio-one.vercel.app](https://rahel-portfolio-one.vercel.app)
 
-```bash
+---
+
+## 🧱 Tech Stack
+
+- **Framework**: [Next.js](https://nextjs.org) (bootstrapped with \`create-next-app\`)
+- **Language**: TypeScript — powering ~97.7% of code
+- **Styling**: CSS (and utilities via Tailwind or custom config)
+- **Fonts**: Custom Google Font optimized via \`next/font\` (Inter)
+- **Build Tools**: Eslint, PostCSS, Tailwind configuration files present
+
+---
+
+## 🚀 Getting Started
+
+Clone the repo and install dependencies:
+
+\`\`\`bash
+git clone https://github.com/rahel-webdeveloper/rahel-portfolio.git
+cd rahel-portfolio
+npm install
+\`\`\`
+
+Run the development server:
+
+\`\`\`bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+\`\`\`
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Open [http://localhost:3000](http://localhost:3000) in your browser to explore the app. Hot reload enabled — edits to \`app/page.tsx\` will reflect live.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+---
 
-## Learn More
+## 📂 Structure Overview
 
-To learn more about Next.js, take a look at the following resources:
+\`\`\`plaintext
+├── app/              # Main Next.js app directory (routes/pages/layout)
+├── components/       # UI and reusable components
+├── data/             # Static content or config data
+├── lib/              # Helper functions or utilities
+├── public/           # Static assets (images, icons, etc.)
+├── .eslintrc.json    # Linting configuration
+├── postcss.config.js
+├── tailwind.config.ts
+├── next.config.mjs
+└── tsconfig.json
+\`\`\`
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## ☁️ Deployment
 
-## Deploy on Vercel
+This project is optimized for deployment on **Vercel**, the creators of Next.js.  
+Set up, connect your GitHub repo, and deploy easily.  
+Full deployment instructions are available in the [Next.js documentation](https://nextjs.org/docs) and [Vercel guide](https://vercel.com/docs).
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## 🤝 Contributing
+
+Contributions are welcome! Here's how:
+
+1. Fork the repository  
+2. Create a feature branch (\`git checkout -b feature/...\`)  
+3. Make your changes  
+4. Commit with clear messages  
+5. Push to your branch  
+6. Open a Pull Request for review
+
+Please adhere to code style (ESLint rules) and ensure all changes are functional.
+
+---
+
+## 📜 License & Credits
+
+This project was bootstrapped using \`create-next-app\` — thanks to the Next.js team!  
+
+Feel free to attribute or adapt this README as needed.
+
+---
+
+## 📬 Contact
+
+Have questions or feedback? Reach out:
+
+- **Email**: your-email@example.com  
+- **Site**: [rahel-portfolio-one.vercel.app](https://rahel-portfolio-one.vercel.app)
+
+EOF
