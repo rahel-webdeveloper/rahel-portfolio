@@ -1,4 +1,3 @@
-cat <<'EOF' > README.md
 # Rahel Portfolio
 
 This is **Rahel’s personal developer portfolio**, built with **Next.js** and **TypeScript**, designed to showcase projects and highlights in a clean, modern way.
@@ -21,18 +20,17 @@ Live Demo: [rahel-portfolio-one.vercel.app](https://rahel-portfolio-one.vercel.a
 
 Clone the repo and install dependencies:
 
-\`\`\`bash
+```bash
 git clone https://github.com/rahel-webdeveloper/rahel-portfolio.git
 cd rahel-portfolio
 npm install
-\`\`\`
+```
 
 Run the development server:
 
-\`\`\`bash
+```bash
 npm run dev
-
-\`\`\`
+```
 
 Open [http://localhost:3000](http://localhost:3000) in your browser to explore the app. Hot reload enabled — edits to \`app/page.tsx\` will reflect live.
 
@@ -90,7 +88,5 @@ Feel free to attribute or adapt this README as needed.
 
 Have questions or feedback? Reach out:
 
-- **Email**: your-email@example.com  
+- **Email**: khatibullahrahel25@gmail.com 
 - **Site**: [rahel-portfolio-one.vercel.app](https://rahel-portfolio-one.vercel.app)
-
-EOF
