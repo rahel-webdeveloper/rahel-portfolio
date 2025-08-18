@@ -4,11 +4,12 @@ import React from "react";
 import MagicButton from "./ui/MagicButton";
 import { FaLocationArrow } from "react-icons/fa6";
 import { socialMedia } from "@/data";
+import Image from "next/image";
 
 const Footer = () => {
   const handleEmailTo = (to?: string, subject?: string, body?: string) => {
     to = "khatibullahrahel25@gmail.com";
-    subject = "Hello Rahel";
+    subject = "Full Stack Developer Inquiry";
     body = "Hi Rahel, \n\nI'd like to get in touch about...";
 
     // Handle click event open email
@@ -20,28 +21,30 @@ const Footer = () => {
     });
 
     const gmailUrl = `${base}&${params.toString()}`;
+    const mailto = `mailto:${encodeURIComponent(
+      to
+    )}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
-    // Try Gmail in new tab
-    const win = window.open(gmailUrl, "_blank");
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
     // Fallback to mailto if Gmail fails
-    if (!win) {
-      const mailto = `maito:${encodeURIComponent(
-        to
-      )}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(
-        body
-      )}`;
-      window.location.href = mailto;
+    if (isMobile) window.location.href = mailto;
+    else {
+      const win = window.open(gmailUrl, "_blank");
+
+      if (!win) window.location.href = mailto;
     }
   };
 
   return (
     <footer className="w-full pt-20 pb-10" id="contact">
       <div className="w-full absolute left-0 -bottom-72 min-h-96">
-        <img
+        <Image
           src="/footer-grid.svg"
           alt="footer grid img"
           className="w-full opacity-50"
+          width={1920}
+          height={400}
         />
       </div>
       <div className="flex flex-col items-center">
@@ -74,7 +77,12 @@ const Footer = () => {
               key={profile.id}
               className="w-10 h-10 cursor-pointer flex items-center justify-center backdrop-blur-lg saturate-150 bg-opacity-75 bg-black-200 rounded-lg border border-black-300"
             >
-              <img src={profile.img} alt={profile.id} width={20} height={20} />
+              <Image
+                src={profile.img}
+                alt={profile.id}
+                width={20}
+                height={20}
+              />
             </div>
           ))}
         </div>
