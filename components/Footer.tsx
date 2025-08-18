@@ -1,10 +1,40 @@
+"use client";
+
 import React from "react";
 import MagicButton from "./ui/MagicButton";
 import { FaLocationArrow } from "react-icons/fa6";
 import { socialMedia } from "@/data";
-import Link from "next/link";
 
 const Footer = () => {
+  const handleEmailTo = (to?: string, subject?: string, body?: string) => {
+    to = "khatibullahrahel25@gmail.com";
+    subject = "Hello Rahel";
+    body = "Hi Rahel, \n\nI'd like to get in touch about...";
+
+    // Handle click event open email
+    const base = "https://mail.google.com/mail/?view=cm&fs=1&tf=1";
+    const params = new URLSearchParams({
+      to: to,
+      su: subject,
+      body: body,
+    });
+
+    const gmailUrl = `${base}&${params.toString()}`;
+
+    // Try Gmail in new tab
+    const win = window.open(gmailUrl, "_blank");
+
+    // Fallback to mailto if Gmail fails
+    if (!win) {
+      const mailto = `maito:${encodeURIComponent(
+        to
+      )}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(
+        body
+      )}`;
+      window.location.href = mailto;
+    }
+  };
+
   return (
     <footer className="w-full pt-20 pb-10" id="contact">
       <div className="w-full absolute left-0 -bottom-72 min-h-96">
@@ -23,13 +53,14 @@ const Footer = () => {
           Reach out to me today and let&apos;s discuss how I can help you
           achieve your goals.
         </p>
-        <Link href="khatibullahrahel25@gmail.com">
-          <MagicButton
-            title="Let's get in touch"
-            icon={<FaLocationArrow />}
-            position="right"
-          />
-        </Link>
+        {/* <Link href={""}> */}
+        <MagicButton
+          title="Let's get in touch"
+          icon={<FaLocationArrow />}
+          position="right"
+          handleClick={handleEmailTo}
+        />
+        {/* </Link> */}
       </div>
 
       <div className="flex mt-16 md:flex-row flex-col justify-between items-center">
