@@ -28,11 +28,11 @@ const Footer = () => {
     const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
     // Fallback to mailto if Gmail fails
-    if (isMobile) window.location.href = mailto;
-    else {
+    if (isMobile) {
+      window.open(mailto);
+    } else {
       const win = window.open(gmailUrl, "_blank");
-
-      if (!win) window.location.href = mailto;
+      if (!win) window.open(mailto);
     }
   };
 
