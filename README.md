@@ -88,5 +88,5 @@ Feel free to attribute or adapt this README as needed.
 
 Have questions or feedback? Reach out:
 
-- **Email**: your-email@example.com  
+- **Email**: khatibullahrahel25@gmail.com 
 - **Site**: [rahel-portfolio-one.vercel.app](https://rahel-portfolio-one.vercel.app)
