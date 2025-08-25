@@ -72,7 +72,7 @@ export const gridItems = [
 export const projects = [
   {
     id: 1,
-    title: "Taskly Pro, With The Power of AI",
+    title: "Taskly Pro, Powered by AI!",
     des: "Taskly Pro is PWA that helps you create, track and analyze your tasks in real-time, It powered by AI with task advising des generating.",
     img: "/p1.png",
     iconLists: ["/js.svg", "/scss.svg", "/put.svg", "/chart.svg", "/nano.svg"],
